@@ -1,0 +1,51 @@
+
+
+<div class=" bg-slate-600 rounded-3xl mt-10 mb-10 ml-10 mr-10 h-[800px] w-auto flex items-center">
+
+  <div class="rounded-3xl bg-gray-400 w-[500px] h-[700px] ml-12 flex items-center justify-center overflow-hidden">
+
+    <img [src]="artista.immagine" class="w-full h-full object-cover rounded-3xl">
+
+  </div>
+
+
+  <div class="bg-slate-400 w-[1200px] h-[700px] rounded-3xl ml-10 mr-10 flex items-center">
+
+    <div class="ml-32">
+
+      <div class="mb-16">
+        <h4>Nome</h4>
+        <h2 class=" ml-10 text-6xl font-semibold text-gray-700/80">{{ artista.name}}</h2>
+      </div>
+
+      <div class="mb-16 mt-16">
+        <h4>Cognome</h4>
+        <h2 class=" ml-10 text-6xl font-semibold text-gray-700/80">{{ artista.cognome}}</h2>
+      </div>
+
+      <div class="mb-16 mt-16">
+        <h4>Data Di Nascita</h4>
+        <h2 class="ml-10 text-6xl font-semibold text-gray-700/80">{{ artista.dataDiNascita }}</h2>
+      </div>
+
+      <div class="mb-16 mt-16">
+        <h4>Luogo Di Nascita</h4>
+        <h2 class="ml-10 text-6xl font-semibold text-gray-700/80">{{ artista.luogoDiNascita }}</h2>
+      </div>
+
+      <div class="mb-16 mt-16" *ngIf="artista.dataDiMorte">
+        <h4>Data Della Morte</h4>
+        <h2 class="ml-10 text-6xl font-semibold text-gray-700/80">{{ artista.dataDiMorte }}</h2>
+      </div>
+
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+</div>

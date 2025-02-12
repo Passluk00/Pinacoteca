@@ -25,7 +25,7 @@
         <img [src]="item.img" alt="quadro" class="object-cover object-center h-100 rounded-3xl">
       </div>
 
-      <a class="text-center cursor-pointer no-underline text-black">
+      <a class="text-center cursor-pointer no-underline text-black" routerLink="/artista/{{item.id}}">
         <h4 class="mt-[30px] ">{{item.nome}} {{item.cognome}}</h4>
       </a>
 

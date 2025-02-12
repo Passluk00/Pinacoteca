@@ -156,4 +156,17 @@ public class OperaService {
         return operaMapper.toOperaFront(opere);
 
     }
+
+    public OperaFront getOpera(Authentication connectedUser, Integer idOpera) {
+
+        User user = (User) connectedUser.getPrincipal();
+        User toCheck = userRepository.findUserById(user.getId());
+        if (toCheck == null) {
+            throw new RuntimeException("User not found");
+        }
+
+        Opera op = operaRepository.findById(idOpera).orElseThrow(() -> new RuntimeException("opera not found"));
+        return operaMapper.toOperaFront(op);
+
+    }
 }

@@ -12,12 +12,18 @@ import { ApiConfiguration } from '../api-configuration';
 import { StrictHttpResponse } from '../strict-http-response';
 
 import { AreaFront } from '../models/area-front';
+import { ArtistaCut } from '../models/artista-cut';
 import { checkIfOwner } from '../fn/front-end-controller/check-if-owner';
 import { CheckIfOwner$Params } from '../fn/front-end-controller/check-if-owner';
 import { getAree } from '../fn/front-end-controller/get-aree';
 import { GetAree$Params } from '../fn/front-end-controller/get-aree';
+import { getArtista } from '../fn/front-end-controller/get-artista';
+import { GetArtista$Params } from '../fn/front-end-controller/get-artista';
+import { getOpera } from '../fn/front-end-controller/get-opera';
+import { GetOpera$Params } from '../fn/front-end-controller/get-opera';
 import { isAdmin } from '../fn/front-end-controller/is-admin';
 import { IsAdmin$Params } from '../fn/front-end-controller/is-admin';
+import { OperaFront } from '../models/opera-front';
 
 @Injectable({ providedIn: 'root' })
 export class FrontEndControllerService extends BaseService {
@@ -47,6 +53,56 @@ export class FrontEndControllerService extends BaseService {
   isAdmin(params?: IsAdmin$Params, context?: HttpContext): Observable<boolean> {
     return this.isAdmin$Response(params, context).pipe(
       map((r: StrictHttpResponse<boolean>): boolean => r.body)
+    );
+  }
+
+  /** Path part for operation `getOpera()` */
+  static readonly GetOperaPath = '/frontEnd/getOpera';
+
+  /**
+   * This method provides access to the full `HttpResponse`, allowing access to response headers.
+   * To access only the response body, use `getOpera()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  getOpera$Response(params: GetOpera$Params, context?: HttpContext): Observable<StrictHttpResponse<OperaFront>> {
+    return getOpera(this.http, this.rootUrl, params, context);
+  }
+
+  /**
+   * This method provides access only to the response body.
+   * To access the full response (for headers, for example), `getOpera$Response()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  getOpera(params: GetOpera$Params, context?: HttpContext): Observable<OperaFront> {
+    return this.getOpera$Response(params, context).pipe(
+      map((r: StrictHttpResponse<OperaFront>): OperaFront => r.body)
+    );
+  }
+
+  /** Path part for operation `getArtista()` */
+  static readonly GetArtistaPath = '/frontEnd/getArtista';
+
+  /**
+   * This method provides access to the full `HttpResponse`, allowing access to response headers.
+   * To access only the response body, use `getArtista()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  getArtista$Response(params: GetArtista$Params, context?: HttpContext): Observable<StrictHttpResponse<ArtistaCut>> {
+    return getArtista(this.http, this.rootUrl, params, context);
+  }
+
+  /**
+   * This method provides access only to the response body.
+   * To access the full response (for headers, for example), `getArtista$Response()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  getArtista(params: GetArtista$Params, context?: HttpContext): Observable<ArtistaCut> {
+    return this.getArtista$Response(params, context).pipe(
+      map((r: StrictHttpResponse<ArtistaCut>): ArtistaCut => r.body)
     );
   }
 

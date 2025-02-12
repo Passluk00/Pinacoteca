@@ -5,6 +5,7 @@
 export { AreaFront } from './models/area-front';
 export { AreaRequest } from './models/area-request';
 export { Artista } from './models/artista';
+export { ArtistaCut } from './models/artista-cut';
 export { ArtistaFront } from './models/artista-front';
 export { ArtistaFrontImg } from './models/artista-front-img';
 export { ArtistaRequest } from './models/artista-request';

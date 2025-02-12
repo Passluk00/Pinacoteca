@@ -522,6 +522,68 @@
         }
       }
     },
+    "/frontEnd/getOpera": {
+      "get": {
+        "tags": [
+          "front-end-controller"
+        ],
+        "operationId": "getOpera",
+        "parameters": [
+          {
+            "name": "idOpera",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperaFront"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/frontEnd/getArtista": {
+      "get": {
+        "tags": [
+          "front-end-controller"
+        ],
+        "operationId": "getArtista",
+        "parameters": [
+          {
+            "name": "idArt",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ArtistaCut"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/frontEnd/getAree": {
       "get": {
         "tags": [
@@ -1113,27 +1175,6 @@
           }
         }
       },
-      "AreaFront": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
-            "type": "string"
-          },
-          "curatore": {
-            "$ref": "#/components/schemas/UserFront"
-          },
-          "items": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/OperaFront"
-            }
-          }
-        }
-      },
       "ArtistaFrontImg": {
         "type": "object",
         "properties": {
@@ -1178,6 +1219,56 @@
           },
           "img": {
             "type": "string"
+          }
+        }
+      },
+      "ArtistaCut": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "cognome": {
+            "type": "string"
+          },
+          "dataDiNascita": {
+            "type": "string",
+            "format": "date"
+          },
+          "luogoDiNascita": {
+            "type": "string"
+          },
+          "dataDiMorte": {
+            "type": "string",
+            "format": "date"
+          },
+          "immagine": {
+            "type": "string"
+          }
+        }
+      },
+      "AreaFront": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "curatore": {
+            "$ref": "#/components/schemas/UserFront"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OperaFront"
+            }
           }
         }
       },

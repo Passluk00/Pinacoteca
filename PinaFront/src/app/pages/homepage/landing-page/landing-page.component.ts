@@ -3,6 +3,7 @@ import {NgbDropdown, NgbDropdownItem, NgbDropdownMenu, NgbDropdownToggle} from "
 import {NgForOf, NgIf} from "@angular/common";
 import {FrontEndControllerService} from "../../../services/services/front-end-controller.service";
 import {AreaFront} from "../../../services/models/area-front";
+import {RouterLink} from "@angular/router";
 
 
 @Component({
@@ -14,7 +15,8 @@ import {AreaFront} from "../../../services/models/area-front";
     NgbDropdownMenu,
     NgbDropdownItem,
     NgForOf,
-    NgIf
+    NgIf,
+    RouterLink
   ],
   templateUrl: './landing-page.component.html',
   styleUrl: './landing-page.component.scss'

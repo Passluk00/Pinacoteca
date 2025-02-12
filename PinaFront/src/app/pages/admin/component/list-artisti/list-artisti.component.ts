@@ -3,6 +3,7 @@ import {AdminControllerService} from "../../../../services/services/admin-contro
 import {NgForOf, NgIf} from "@angular/common";
 import {ArtistaFront} from "../../../../services/models/artista-front";
 import {ArtistaFrontImg} from "../../../../services/models/artista-front-img";
+import {RouterLink} from "@angular/router";
 
 
 @Component({
@@ -10,7 +11,8 @@ import {ArtistaFrontImg} from "../../../../services/models/artista-front-img";
   standalone: true,
   imports: [
     NgForOf,
-    NgIf
+    NgIf,
+    RouterLink
   ],
   templateUrl: './list-artisti.component.html',
   styleUrl: './list-artisti.component.scss'

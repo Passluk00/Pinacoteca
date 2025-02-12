@@ -126,4 +126,17 @@ public class ArtistaService {
 
         return art;
     }
+
+    public ArtistaCut getArtista(Authentication connectedUser, Integer idArt) {
+
+        User user = (User) connectedUser.getPrincipal();
+        User toCheck = userRepository.findUserById(user.getId());
+        if(toCheck == null){
+            throw new RuntimeException("User not found");
+        }
+
+        Artista art = artistaRepository.findById(idArt).orElseThrow(() -> new RuntimeException("artista non trovato"));
+        return artistaMapper.toArtistaCut(art);
+
+    }
 }

@@ -3,13 +3,15 @@ import {AdminControllerService} from "../../../../services/services/admin-contro
 import {NgForOf} from "@angular/common";
 import {Opera} from "../../../../services/models/opera";
 import {OperaFront} from "../../../../services/models/opera-front";
+import {RouterLink} from "@angular/router";
 
 
 @Component({
   selector: 'app-list-opere',
   standalone: true,
   imports: [
-    NgForOf
+    NgForOf,
+    RouterLink
   ],
   templateUrl: './list-opere.component.html',
   styleUrl: './list-opere.component.scss'

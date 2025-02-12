@@ -1,0 +1,46 @@
+
+
+<div class=" bg-slate-600 rounded-3xl mt-10 mb-10 ml-10 mr-10 h-[800px] w-auto flex items-center">
+
+  <div class="rounded-3xl bg-gray-400 w-[500px] h-[700px] ml-12 flex items-center justify-center overflow-hidden">
+
+    <img [src]="opera.img" class="w-full h-full object-cover rounded-3xl">
+
+  </div>
+
+
+  <div class="bg-slate-400 w-[1200px] h-[700px] rounded-3xl ml-10 mr-10 flex items-center">
+
+    <div class="ml-32">
+
+      <div class="mb-16">
+        <h4>Titolo</h4>
+        <h2 class=" ml-10 text-6xl font-semibold text-gray-700/80">{{ opera.title }}</h2>
+      </div>
+
+      <div class="mb-16 mt-16">
+        <h4>Anno</h4>
+        <h2 class=" ml-10 text-6xl font-semibold text-gray-700/80">{{ opera.anno }}</h2>
+      </div>
+
+      <div class="mb-16 mt-16">
+        <h4>Tecnica</h4>
+        <h2 class="ml-10 text-6xl font-semibold text-gray-700/80">{{ opera.tecnica }}</h2>
+      </div>
+
+      <a class="no-underline mt-16 cursor-pointer hover:text-black" [routerLink]="['/artista', opera.artista?.id]">
+        <h4 class="text-black">Artista</h4>
+        <h2 class=" ml-10 text-6xl font-semibold text-gray-700/80 hover:text-black" >{{ opera.artista?.nome +" "+ opera.artista?.cognome }}</h2>
+      </a>
+
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+</div>

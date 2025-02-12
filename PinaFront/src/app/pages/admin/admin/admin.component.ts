@@ -12,7 +12,6 @@ import {ListArtist} from "../../../services/models/list-artist";
 import {ListOpereComponent} from "../component/list-opere/list-opere.component";
 import {ListArtistiComponent} from "../component/list-artisti/list-artisti.component";
 import {Artista} from "../../../services/models/artista";
-
 import {OperaFront} from "../../../services/models/opera-front";
 import {AreaRequest} from "../../../services/models/area-request";
 import {AreaFront} from "../../../services/models/area-front";
@@ -44,7 +43,7 @@ export class AdminComponent implements OnInit{
   }
 
 
-  visibleElement: string | null = 'Aree';      // sostituire con Allopere
+  visibleElement: string | null = 'allOpere';      // sostituire con Allopere
   isDragging = false;
   previewImage: string | null = null;
   previewImageMod: string | null = null;
@@ -125,13 +124,11 @@ export class AdminComponent implements OnInit{
     }
   }
 
-
   setupDatiDelOp(){
     if(this.opDaDel.img != null) {
       this.previewImageDelOp = this.opDaDel?.img
     }
   }
-
 
   setupDati(){
     if(this.artDaMod.immagine != null) {
@@ -150,8 +147,6 @@ export class AdminComponent implements OnInit{
       this.previewImageModOp = this.opDaMod?.img
     }
   }
-
-
 
   prendiDatiDel(){
 
@@ -193,8 +188,6 @@ export class AdminComponent implements OnInit{
 
   }
 
-
-
   getArtist(){
 
     this.adminService.getAllArtistForMenu().subscribe({
@@ -225,6 +218,7 @@ export class AdminComponent implements OnInit{
       }).subscribe({
         next:() => {
           console.error("inviato")
+          window.location.reload()
           this.removeImage()
         },
         error:(err) => {
@@ -261,15 +255,7 @@ export class AdminComponent implements OnInit{
   }
 
 
-
-
-
-
-
-
   // opera
-
-
 
   getAllOpere(){
 
@@ -284,9 +270,6 @@ export class AdminComponent implements OnInit{
     })
 
   }
-
-
-
 
   prendiDatiOpera(){
 
@@ -328,7 +311,6 @@ export class AdminComponent implements OnInit{
 
   }
 
-
   modificaOpera(){
 
     if(this.previewImageModOp != null && this.operaDaMod != 0 && this.artOpSelected != 0){
@@ -350,7 +332,6 @@ export class AdminComponent implements OnInit{
 
   }
 
-
   eliminaOpera(){
 
     if(this.operaDaDel != 0){
@@ -368,15 +349,7 @@ export class AdminComponent implements OnInit{
   }
 
 
-
-
-
-
-
-
-
   // Gestione DragAndDrop
-
 
   triggerFileSelect(){
     const fileInput = document.getElementById('fileInput') as HTMLInputElement;
@@ -479,9 +452,6 @@ export class AdminComponent implements OnInit{
     })
   }
 
-
-
-
   cancellaArea(){
     this.adminService.delArea({
       idArea: this.areaSelezionata
@@ -513,7 +483,6 @@ export class AdminComponent implements OnInit{
     })
   }
 
-
   aggiungiAdArea(){
     if(this.areaSelezionataAcuiAggiungere!= 0 && this.quadroDaAggiungere != 0){
       this.adminService.addOperaAdarea({
@@ -522,6 +491,7 @@ export class AdminComponent implements OnInit{
       }).subscribe({
         next: () => {
           console.error("aggiunto con successo")
+          window.location.reload()
         },
         error: (res) => {
           console.error("Fail to add to area: "+ res)
@@ -533,6 +503,7 @@ export class AdminComponent implements OnInit{
 
   dataCura:UserFront[] =[]
   curaSelezionato: number = 0
+
   getCuratoriLiberi(){
 
     this.adminService.getAllCuraFree().subscribe({
@@ -544,9 +515,6 @@ export class AdminComponent implements OnInit{
       }
     })
   }
-
-
-
 
 
 

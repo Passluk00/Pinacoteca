@@ -50,4 +50,16 @@ public class ArtistaMapper {
         return arts.stream().map(this::toArtistFrontImg)
                 .collect(Collectors.toList());
     }
+
+    public ArtistaCut toArtistaCut(Artista ar){
+        return ArtistaCut.builder()
+                .id(ar.getId())
+                .name(ar.getName())
+                .cognome(ar.getCognome())
+                .immagine(ar.getImmagine())
+                .luogoDiNascita(ar.getLuogoDiNascita())
+                .dataDiNascita(ar.getDataDiNascita())
+                .dataDiMorte(ar.getDataDiMorte())
+                .build();
+    }
 }
