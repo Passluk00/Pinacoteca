@@ -7,10 +7,10 @@ import lombok.RequiredArgsConstructor;
 public enum Permission {
 
 
-    CURATOR_READ("customer:read"),
-    CURATOR_UPDATE("customer:update"),
-    CURATOR_DELETE("customer:delete"),
-    CURATOR_CREATE("customer:create"),
+    CURATOR_READ("curator:read"),
+    CURATOR_UPDATE("curator:update"),
+    CURATOR_DELETE("curator:delete"),
+    CURATOR_CREATE("curator:create"),
 
 
 

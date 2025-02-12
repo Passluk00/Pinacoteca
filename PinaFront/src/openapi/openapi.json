@@ -1,0 +1,1213 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "OpenApi specification - Passluk",
+    "description": "OpenApi documentation for Spring Security",
+    "termsOfService": "Terms of service",
+    "contact": {
+      "name": "Passluk",
+      "email": "Pinacoteca@gmail.com"
+    },
+    "license": {
+      "name": "Licence Pinacoteca",
+      "url": "https://Pinacoteca.com"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080/api/v1",
+      "description": "Local ENV"
+    }
+  ],
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ],
+  "paths": {
+    "/auth/register": {
+      "post": {
+        "tags": [
+          "authentication"
+        ],
+        "operationId": "register",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegistrationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "description": "Accepted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/check": {
+      "post": {
+        "tags": [
+          "authentication"
+        ],
+        "operationId": "check",
+        "parameters": [
+          {
+            "name": "token",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/authenticate": {
+      "post": {
+        "tags": [
+          "authentication"
+        ],
+        "operationId": "authenticate",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AuthenticationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AuthenticationResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/creaOpera": {
+      "post": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "creaOpera",
+        "parameters": [
+          {
+            "name": "idArtista",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "file",
+                  "req"
+                ],
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "req": {
+                    "$ref": "#/components/schemas/OperaRequest"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/creaArtista": {
+      "post": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "creaArtista",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "req"
+                ],
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "req": {
+                    "$ref": "#/components/schemas/ArtistaRequest"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/creaArea": {
+      "post": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "creaArea",
+        "parameters": [
+          {
+            "name": "idCur",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AreaRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/assegnaAreaACuratore": {
+      "post": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "assegnaAreaACuratore",
+        "parameters": [
+          {
+            "name": "idArea",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "idCur",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/addOperaAdArea": {
+      "post": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "addOperaAdarea",
+        "parameters": [
+          {
+            "name": "idOpera",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "idArea",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/modOpera": {
+      "patch": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "modOpera",
+        "parameters": [
+          {
+            "name": "idOpera",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "idArt",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Opera"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/modArtista": {
+      "patch": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "modArtista",
+        "parameters": [
+          {
+            "name": "idArt",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Artista"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/changeOwnerToOpera": {
+      "patch": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "changeOwnerToOpera",
+        "parameters": [
+          {
+            "name": "idOpera",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "idArtista",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/changeCurtorTOArea": {
+      "patch": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "changeCurtorTOArea",
+        "parameters": [
+          {
+            "name": "idArea",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "idcur",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/frontEnd/getAree": {
+      "get": {
+        "tags": [
+          "front-end-controller"
+        ],
+        "operationId": "getAree",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/AreaFront"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/curator/test": {
+      "get": {
+        "tags": [
+          "curator-controller"
+        ],
+        "operationId": "testSicurezza",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/curator/getCuratorData": {
+      "get": {
+        "tags": [
+          "curator-controller"
+        ],
+        "operationId": "getCuratorData",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UserResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/testController": {
+      "get": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "testController",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/getOperaDaMod": {
+      "get": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "getOperaDaMod",
+        "parameters": [
+          {
+            "name": "idOpera",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OperaFront"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/getCuraDisponibili": {
+      "get": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "getAllCuraFree",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UserFront"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/getArtistaForMod": {
+      "get": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "getArtistaDaMod",
+        "parameters": [
+          {
+            "name": "idArt",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Artista"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/getAllOpereLibere": {
+      "get": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "getAllFree",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OperaFront"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/getAllOpereForDisplay": {
+      "get": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "getAllOpereForDisplay",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/OperaFront"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/getAllArtistForMenu": {
+      "get": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "getAllArtistForMenu",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ListArtist"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/getAllArtistForDisplay": {
+      "get": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "getAllArtistForDisplay",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ArtistaFrontImg"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/removeAreaFromCurator": {
+      "delete": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "removeAreaToCurator",
+        "parameters": [
+          {
+            "name": "idCur",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/deleteOpera": {
+      "delete": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "deleteOpera",
+        "parameters": [
+          {
+            "name": "idOpera",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/deleteArtista": {
+      "delete": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "deleteArtista",
+        "parameters": [
+          {
+            "name": "idArt",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/admin/delArea": {
+      "delete": {
+        "tags": [
+          "admin-controller"
+        ],
+        "operationId": "delArea",
+        "parameters": [
+          {
+            "name": "idArea",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "RegistrationRequest": {
+        "required": [
+          "codiceFiscale",
+          "cognome",
+          "dataNascita",
+          "email",
+          "luogoDiNascita",
+          "nome",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "nome": {
+            "type": "string"
+          },
+          "cognome": {
+            "type": "string"
+          },
+          "codiceFiscale": {
+            "maxLength": 2147483647,
+            "minLength": 16,
+            "type": "string"
+          },
+          "dataNascita": {
+            "type": "string",
+            "format": "date"
+          },
+          "luogoDiNascita": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "maxLength": 2147483647,
+            "minLength": 8,
+            "pattern": "^(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$",
+            "type": "string"
+          }
+        }
+      },
+      "AuthenticationRequest": {
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        }
+      },
+      "AuthenticationResponse": {
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string"
+          }
+        }
+      },
+      "OperaRequest": {
+        "required": [
+          "anno",
+          "tecnica",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "anno": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tecnica": {
+            "type": "string"
+          }
+        }
+      },
+      "ArtistaRequest": {
+        "required": [
+          "cognome",
+          "dataDiNascita",
+          "luogoDiNascita",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "cognome": {
+            "type": "string"
+          },
+          "dataDiNascita": {
+            "type": "string",
+            "format": "date"
+          },
+          "luogoDiNascita": {
+            "type": "string"
+          },
+          "dataDiMorte": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      },
+      "AreaRequest": {
+        "required": [
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "Artista": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "cognome": {
+            "type": "string"
+          },
+          "dataDiNascita": {
+            "type": "string",
+            "format": "date"
+          },
+          "luogoDiNascita": {
+            "type": "string"
+          },
+          "dataDiMorte": {
+            "type": "string",
+            "format": "date"
+          },
+          "opere": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Opera"
+            }
+          },
+          "immagine": {
+            "type": "string"
+          }
+        }
+      },
+      "Opera": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string"
+          },
+          "anno": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tecnica": {
+            "type": "string"
+          },
+          "posizione": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "artista": {
+            "$ref": "#/components/schemas/Artista"
+          },
+          "immagine": {
+            "type": "string"
+          }
+        }
+      },
+      "AreaFront": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "curatore": {
+            "$ref": "#/components/schemas/UserFront"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OperaFront"
+            }
+          }
+        }
+      },
+      "ArtistaFrontImg": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nome": {
+            "type": "string"
+          },
+          "cognome": {
+            "type": "string"
+          },
+          "img": {
+            "type": "string"
+          }
+        }
+      },
+      "OperaFront": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string"
+          },
+          "anno": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tecnica": {
+            "type": "string"
+          },
+          "posizione": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "artista": {
+            "$ref": "#/components/schemas/ArtistaFrontImg"
+          },
+          "img": {
+            "type": "string"
+          }
+        }
+      },
+      "UserFront": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "cognome": {
+            "type": "string"
+          }
+        }
+      },
+      "UserResponse": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "nome": {
+            "type": "string"
+          },
+          "cognome": {
+            "type": "string"
+          },
+          "url_pic": {
+            "type": "string"
+          }
+        }
+      },
+      "ArtistaFront": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nome": {
+            "type": "string"
+          },
+          "cognome": {
+            "type": "string"
+          }
+        }
+      },
+      "ListArtist": {
+        "type": "object",
+        "properties": {
+          "lista": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ArtistaFront"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "description": "JWT auth description",
+        "in": "header",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}

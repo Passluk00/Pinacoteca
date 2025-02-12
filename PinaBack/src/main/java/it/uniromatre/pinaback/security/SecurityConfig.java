@@ -69,7 +69,7 @@ public class SecurityConfig {
                                 .requestMatchers(PUT, "/admin/**").hasAnyAuthority(ADMIN_UPDATE.name())
                                 .requestMatchers(DELETE, "/admin/**").hasAnyAuthority(ADMIN_DELETE.name())
 
-                                // Customers
+                                // Curator
 
                                 .requestMatchers("/curator/**").hasAnyRole(ADMIN.name(), CURATOR.name() )
                                 .requestMatchers(GET,"/curator/**").hasAnyAuthority(ADMIN_READ.name(), CURATOR.name())

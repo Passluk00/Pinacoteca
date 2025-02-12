@@ -3,6 +3,7 @@ package it.uniromatre.pinaback.auth;
 import jakarta.validation.constraints.*;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.Setter;
 
 import java.time.LocalDate;
@@ -26,13 +27,9 @@ public class RegistrationRequest {
     @Size(min = 16, message = "Il Codice fiscale é di 16 Caratteri")
     private String codiceFiscale;
 
-
-
-    @NotEmpty(message = "La data di nascita è Obbligatoria")
-    @NotBlank(message = "La data di nascita è Obbligatoria")
+    @NotNull(message = "La Data di Nascita è Obbligatoria")
+    @Past(message = "La Data Di Nascita è Obbligatoria")
     private LocalDate dataNascita;
-
-
 
     @NotEmpty(message = "Il luogo di Nascita è Obbligatorio")
     @NotBlank(message = "Il luogo di Nascita è Obbligatorio")

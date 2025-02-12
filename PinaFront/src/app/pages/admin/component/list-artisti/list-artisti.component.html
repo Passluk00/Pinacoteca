@@ -1,0 +1,37 @@
+<div class="flex justify-center pt-4">
+  <h1>Tutti Gli Artisti</h1>
+</div>
+
+<div class="min-h-[600px] m-3 rounded-3xl ">
+
+  <div class=" flex mt-10 bg-slate-400 xl:h-[100px] rounded-t-3xl bottom-0 justify-center items-center md:mt-0">
+    <div class="pt-3 pb-3 md:pt-3 md:pb-0">
+
+      <input type="text" class="form-control" aria-label="Text input with dropdown button">
+
+    </div>
+  </div>
+
+  <div class="justify-center bg-slate-300 p-2 rounded-b-3xl min-h-[400px] w-full flex flex-wrap md:justify-between">
+
+
+    <div *ngIf="lista.length === 0">
+      vuota
+    </div>
+
+    <div class="bg-slate-400 h-[350px] w-[250px] m-8 rounded-3xl" *ngFor="let item of lista">
+
+      <div class="bg-white h-[250px] mt-2 ml-2 mr-2 rounded-3xl flex justify-center items-center" >
+        <img [src]="item.img" alt="quadro" class="object-cover object-center h-100 rounded-3xl">
+      </div>
+
+      <a class="text-center cursor-pointer no-underline text-black">
+        <h4 class="mt-[30px] ">{{item.nome}} {{item.cognome}}</h4>
+      </a>
+
+
+    </div>
+
+  </div>
+
+</div>

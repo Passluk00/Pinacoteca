@@ -15,6 +15,7 @@ import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 
+
 @Getter
 @Setter
 @Builder
@@ -75,23 +76,13 @@ public class User implements UserDetails, Principal {
     }
 
     @Override
-    public String getName() {
-        return this.getName();
-    }
-
-    @Override
-    public String getPassword() {
-        return this.password;
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return roles.getAuthorities();
     }
 
     @Override
     public String getUsername() {
         return this.email;
-    }
-
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return roles.getAuthorities();
     }
 
     @Override
@@ -108,4 +99,18 @@ public class User implements UserDetails, Principal {
     public boolean isCredentialsNonExpired() {
         return true;
     }
+
+    @Override
+    public boolean isEnabled() {
+        return this.enabled;
+    }
+
+    @Override
+    public String getName() {
+        return this.email;
+    }
+
+    public String getNomeReale(){ return this.nome;}
+
+
 }

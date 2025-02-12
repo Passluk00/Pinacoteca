@@ -8,6 +8,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.List;
+
 @Service
 @AllArgsConstructor
 public class ArtistaService {
@@ -55,7 +57,7 @@ public class ArtistaService {
 
     }
 
-    public void modArtista(Authentication connectedUser, Integer idArt, ArtistaRequest req, MultipartFile file) {
+    public void modArtista(Authentication connectedUser, Integer idArt, Artista req) {
 
         if(idArt == null || idArt == 0 || req == null){
             throw new RuntimeException("request is invalid");
@@ -74,15 +76,54 @@ public class ArtistaService {
         art.setDataDiNascita(req.getDataDiNascita());
         art.setLuogoDiNascita(req.getLuogoDiNascita());
         art.setDataDiMorte(req.getDataDiMorte());
-        if(file != null){
-            art.setImmagine(fileStorageService.saveFile(file, toCheck.getId()));
-        }
         artistaRepository.save(art);
     }
 
 
+    public ListArtist getAllArtistFotMenu(Authentication connectedUser) {
+
+        User user = (User) connectedUser.getPrincipal();
+        User toCheck = userRepository.findUserById(user.getId());
+        if(toCheck == null){
+            throw new RuntimeException("User not found");
+        }
+
+        List<Artista> lista = artistaRepository.getAll();
+        List<ArtistaFront> arts = artistaMapper.toListArtistFront(lista);
+
+        return new ListArtist(arts);
 
 
+    }
 
+    public List<ArtistaFrontImg> getAllArtistForAdmin(Authentication connectedUser) {
 
+        User user = (User) connectedUser.getPrincipal();
+        User toCheck = userRepository.findUserById(user.getId());
+        if(toCheck == null){
+            throw new RuntimeException("User not found");
+        }
+
+        List<Artista> lista = artistaRepository.getAllOrdered();
+        List<ArtistaFrontImg> arts = artistaMapper.toListArtistFrontImg(lista);
+
+        return arts;
+    }
+
+    public Artista getArtistForMod(Authentication connectedUser, Integer idArtista) {
+
+        User user = (User) connectedUser.getPrincipal();
+        User toCheck = userRepository.findUserById(user.getId());
+        if(toCheck == null){
+            throw new RuntimeException("User not found");
+        }
+
+        if(idArtista == null) {
+            throw new RuntimeException("id Artista is null");
+        }
+
+        Artista art = artistaRepository.findById(idArtista).orElseThrow(() -> new RuntimeException("artista non trovato"));
+
+        return art;
+    }
 }

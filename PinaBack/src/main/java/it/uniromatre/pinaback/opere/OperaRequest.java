@@ -26,9 +26,4 @@ public class OperaRequest {
     @NotBlank(message = "La Tecnica é Obbligatoria")
     private String tecnica;
 
-    @NotEmpty(message = "")
-    @NotBlank(message = "")
-    private Artista artista;
-
-
 }

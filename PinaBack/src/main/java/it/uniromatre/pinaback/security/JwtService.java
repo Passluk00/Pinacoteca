@@ -4,6 +4,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+
 import it.uniromatre.pinaback.user.User;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
@@ -19,18 +20,17 @@ import java.util.Date;
 import java.util.Map;
 import java.util.function.Function;
 
+
 @Service
 @AllArgsConstructor
 
 public class JwtService {
-
 
     JwtService(){
         this.secretKey = "404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970";
         this.jwtExpiration = 86400000;
     }
 
-    private static final Logger log = LoggerFactory.getLogger(JwtService.class);
     private String secretKey;
     private long jwtExpiration;
 
@@ -39,7 +39,7 @@ public class JwtService {
     private long refreshExpiration;
 
     @Autowired
-    private JwtRepository jwtTokenRepository;
+    private  JwtRepository jwtTokenRepository;
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
@@ -110,6 +110,7 @@ public class JwtService {
 
     public boolean isTokenValid(String token, UserDetails userDetails) {
         final String username = extractUsername(token);
+
         return (username.equals(userDetails.getUsername())) && !isTokenExpired(token);
     }
 
@@ -157,7 +158,6 @@ public class JwtService {
 
 
     }
-
 
 
 

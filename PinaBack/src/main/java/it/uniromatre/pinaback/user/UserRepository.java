@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -20,4 +21,10 @@ public interface UserRepository extends JpaRepository<User, Integer>{
     @Query(value = "SELECT i FROM User i ORDER BY function('RAND')")
     User findRandom();
 
+    @Query("""
+    select u
+    from User u
+    where u.area is null
+    """)
+    List<User> getAllFree();
 }

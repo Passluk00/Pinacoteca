@@ -19,6 +19,7 @@ import java.util.HashMap;
 public class AuthService {
 
 
+
     private final UserRepository userRepository;
     private final AuthenticationManager authenticationManager;
     private final PasswordEncoder passwordEncoder;
@@ -37,9 +38,11 @@ public class AuthService {
                 .nome(request.getNome())
                 .cognome(request.getCognome())
                 .codiceFiscale(request.getCodiceFiscale())
-                // data e luogo di nascita
+                .dataNascita(request.getDataNascita())
+                .luogoNascita(request.getLuogoDiNascita())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .createdDate(LocalDateTime.now())
+                .url_picture("./app/File/profile.jpeg")
                 .accountLocked(false)
                 .enabled(true)
                 .roles(Role.CURATOR)
@@ -66,6 +69,7 @@ public class AuthService {
                 .luogoNascita(request.getLuogoDiNascita())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .createdDate(LocalDateTime.now())
+                .url_picture("./app/File/profile.jpeg")
                 .accountLocked(false)
                 .enabled(true)
                 .roles(Role.ADMIN)
@@ -83,6 +87,7 @@ public class AuthService {
                 )
         );
 
+
         var claims = new HashMap<String , Object>();
         var user = ((User) auth.getPrincipal());
         claims.put("username", user.getUsername());
@@ -92,6 +97,7 @@ public class AuthService {
         jwtService.revokeAllUserTokens(user);
 
         var jwtToken = jwtService.generateTokenESalva(claims,user);
+
         return AuthenticationResponse.builder().token(jwtToken).build();
 
     }
@@ -100,6 +106,7 @@ public class AuthService {
     // controllo se il token è valido
 
     public boolean authWithToken(String token){
+
         var to = jwtService.isTokenStillValid(token);
         if(!to){
             throw new RuntimeException("Token Not valid");

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="015fe501-c4a7-4071-8946-f13c3df12a26" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/area/AreaFront.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/artisti/ArtistaFront.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/artisti/ArtistaFrontImg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/artisti/ListArtist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/artisti/ListArtistiFrontImg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/opere/ListOpere.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/opere/OperaFront.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/user/UserFront.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/user/UserResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/.vscode/extensions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/.vscode/launch.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/.vscode/tasks.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/File/logo-pinacoteca.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/File/profile.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/app.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/app.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/app.routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/components/footer/footer.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/components/footer/footer.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/components/footer/footer.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/components/footer/footer.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/components/navbar/navbar.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/components/navbar/navbar.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/components/navbar/navbar.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/components/navbar/navbar.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/admin/admin/admin.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/admin/admin/admin.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/admin/admin/admin.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/admin/admin/admin.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/admin/component/list-artisti/list-artisti.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/admin/component/list-artisti/list-artisti.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/admin/component/list-artisti/list-artisti.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/admin/component/list-artisti/list-artisti.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/admin/component/list-opere/list-opere.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/admin/component/list-opere/list-opere.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/admin/component/list-opere/list-opere.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/admin/component/list-opere/list-opere.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/curatore/curatore.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/curatore/curatore/curatore.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/curatore/curatore/curatore.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/curatore/curatore/curatore.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/curatore/curatore/curatore.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/homepage/homepage-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/homepage/homepage.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/homepage/homepage/homepage.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/homepage/homepage/homepage.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/homepage/homepage/homepage.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/homepage/homepage/homepage.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/homepage/landing-page/landing-page.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/homepage/landing-page/landing-page.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/homepage/landing-page/landing-page.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/homepage/landing-page/landing-page.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/login/login.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/login/login.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/login/login.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/login/login.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/register/register.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/register/register.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/register/register.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/pages/register/register.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/api-configuration.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/api.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/base-service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/add-opera-adarea.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/assegna-area-a-curatore.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/change-curtor-to-area.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/change-owner-to-opera.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/crea-area.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/crea-artista.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/crea-opera.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/del-area.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/delete-artista.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/delete-opera.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/get-all-artist-for-display.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/get-all-artist-for-menu.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/get-all-cura-free.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/get-all-free.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/get-all-opere-for-display.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/get-artista-da-mod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/get-opera-da-mod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/mod-artista.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/mod-opera.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/remove-area-to-curator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/admin-controller/test-controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/authentication/authenticate.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/authentication/check.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/authentication/register.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/curator-controller/get-curator-data.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/curator-controller/test-sicurezza.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/fn/front-end-controller/get-aree.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/interceptor/http-interceptor.interceptor.specs.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/interceptor/http-interceptor.interceptor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/models.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/models/area-front.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/models/area-request.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/models/artista-front-img.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/models/artista-front.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/models/artista-request.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/models/artista.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/models/authentication-request.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/models/authentication-response.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/models/list-artist.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/models/opera-front.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/models/opera-request.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/models/opera.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/models/registration-request.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/models/user-front.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/models/user-response.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/request-builder.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/services.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/services/admin-controller.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/services/authentication.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/services/curator-controller.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/services/front-end-controller.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/strict-http-response.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/token/token.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/app/services/token/token.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/openapi/openapi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/src/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PinaFront/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739350706660.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739350801219.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739350899920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739353952417.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739354635770.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739356085955.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739356093235.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739356237074.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739357722837.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739357745427.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739357782899.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739357855533.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739358069982.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739358204735.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739358218208.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739358271684.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739358292966.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739358540820.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739358557868.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739358764408.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739358786870.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739359050231.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739359068817.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739359260770.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739359276195.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739359554545.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739359783815.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739359801290.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739359811848.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739359836496.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739360120778.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739360145582.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739360172810.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739360192742.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739360213440.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739360467848.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739360676893.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739360697578.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739360727110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739360745564.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739360760933.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739361806590.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739361823790.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739361834193.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739361848169.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739361861351.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739361880130.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739362573319.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739362582327.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739362594055.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739362604653.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739362616022.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739362630172.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739362644514.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739362658800.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739365080572.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739365706794.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739366641159.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739370038550.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739370071474.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739370140770.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739371947421.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739377235085.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739378105501.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739378199543.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739380143792.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739380166043.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739380553193.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739380574339.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739380709991.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739381725717.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739381740385.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739382138476.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739382174504.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739382864564.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739382885060.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739382904682.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Uploads/users/1/1739382946270.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PinaCoteca.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PinaCoteca.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/PinaBackApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/PinaBackApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/area/Area.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/area/Area.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/area/AreaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/area/AreaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/area/AreaRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/area/AreaRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/area/AreaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/area/AreaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/artisti/ArtistaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/artisti/ArtistaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/artisti/ArtistaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/artisti/ArtistaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/artisti/ArtistaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/artisti/ArtistaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/auth/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/auth/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/auth/RegistrationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/auth/RegistrationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/controller/CuratorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/controller/CuratorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/controller/FrontEndController.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/controller/FrontEndController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/opere/OperaMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/opere/OperaMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/opere/OperaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/opere/OperaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/opere/OperaRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/opere/OperaRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/opere/OperaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/opere/OperaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/role/Permission.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/role/Permission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/security/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/security/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/security/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/security/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/user/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/user/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/user/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/user/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/user/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/java/it/uniromatre/pinaback/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PinaBack/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/PinaBack/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2suLq1fcvRvFyIrkLhBMdo1DIpj" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.PinaBackApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "jsx.switch.disabled": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/passluk/Desktop/PinaCoteca/PinaFront/src/app/File",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "ts.external.directory.path": "/Users/passluk/Desktop/PinaCoteca/PinaFront/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="it.uniromatre.pinaback.user" />
+      <recent name="it.uniromatre.pinaback.area" />
+      <recent name="it.uniromatre.pinaback.opere" />
+      <recent name="it.uniromatre.pinaback.artisti" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PinaFront/src/app/File" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PinaFront/src/app/File" />
+      <recent name="$PROJECT_DIR$/PinaFront/public" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="PinaBackApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="PinaBack" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="it.uniromatre.pinaback.PinaBackApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="015fe501-c4a7-4071-8946-f13c3df12a26" name="Changes" comment="" />
+      <created>1739300699875</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739300699875</updated>
+      <workItem from="1739300700949" duration="118000" />
+      <workItem from="1739300826961" duration="69000" />
+      <workItem from="1739300897198" duration="57000" />
+      <workItem from="1739300961446" duration="1928000" />
+      <workItem from="1739303821945" duration="59970000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

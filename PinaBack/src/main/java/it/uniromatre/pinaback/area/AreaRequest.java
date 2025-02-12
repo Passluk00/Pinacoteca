@@ -17,9 +17,7 @@ public class AreaRequest {
     @NotBlank(message = "il nome dell'area è Obbligatorio")
     private String name;
 
-    @NotEmpty(message = "Devi selezionare un curatore")
-    @NotBlank(message = "Devi selezionare un curatore")
-    private User curatore;
+
 
 
 }

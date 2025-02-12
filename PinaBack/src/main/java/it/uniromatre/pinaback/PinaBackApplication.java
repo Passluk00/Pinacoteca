@@ -43,6 +43,24 @@ public class PinaBackApplication {
                     .build();
             service.registerAdmin(admin);
 
+
+            LocalDate data1 = LocalDate.now();
+
+            var test = RegistrationRequest.builder()
+
+                    .nome("user")
+                    .cognome("user")
+                    .codiceFiscale("2222222222222222")
+                    .dataNascita(data1)
+                    .luogoDiNascita("pisa")
+                    .email("user@mail.com")
+                    .password("password")
+                    .build();
+            service.registerAdmin(test);
+
+
+
+
         };
     }
 

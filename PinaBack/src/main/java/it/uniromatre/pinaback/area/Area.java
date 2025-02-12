@@ -21,7 +21,6 @@ public class Area {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-
     private String name;
 
     @OneToOne(cascade = CascadeType.ALL)
@@ -29,6 +28,8 @@ public class Area {
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<Opera> opere;
+
+
 
 
 
