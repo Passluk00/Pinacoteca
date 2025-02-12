@@ -72,10 +72,10 @@
           <ul class="text-sm mt-2 bg-white" aria-labelledby="dropdownDefaultButton">
 
 
-            <li class="elements-list cursor-pointer" >
+            <li class="elements-list cursor-pointer" *ngIf="isCurator">
               <a (click)="goToManage()">
                 <fa-icon class="icon" [icon]="faShop"></fa-icon>
-                Gestisci Ordini
+                Curatore
               </a>
             </li>
 

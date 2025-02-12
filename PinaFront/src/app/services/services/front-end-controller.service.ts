@@ -12,13 +12,42 @@ import { ApiConfiguration } from '../api-configuration';
 import { StrictHttpResponse } from '../strict-http-response';
 
 import { AreaFront } from '../models/area-front';
+import { checkIfOwner } from '../fn/front-end-controller/check-if-owner';
+import { CheckIfOwner$Params } from '../fn/front-end-controller/check-if-owner';
 import { getAree } from '../fn/front-end-controller/get-aree';
 import { GetAree$Params } from '../fn/front-end-controller/get-aree';
+import { isAdmin } from '../fn/front-end-controller/is-admin';
+import { IsAdmin$Params } from '../fn/front-end-controller/is-admin';
 
 @Injectable({ providedIn: 'root' })
 export class FrontEndControllerService extends BaseService {
   constructor(config: ApiConfiguration, http: HttpClient) {
     super(config, http);
+  }
+
+  /** Path part for operation `isAdmin()` */
+  static readonly IsAdminPath = '/frontEnd/isAdmin';
+
+  /**
+   * This method provides access to the full `HttpResponse`, allowing access to response headers.
+   * To access only the response body, use `isAdmin()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  isAdmin$Response(params?: IsAdmin$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
+    return isAdmin(this.http, this.rootUrl, params, context);
+  }
+
+  /**
+   * This method provides access only to the response body.
+   * To access the full response (for headers, for example), `isAdmin$Response()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  isAdmin(params?: IsAdmin$Params, context?: HttpContext): Observable<boolean> {
+    return this.isAdmin$Response(params, context).pipe(
+      map((r: StrictHttpResponse<boolean>): boolean => r.body)
+    );
   }
 
   /** Path part for operation `getAree()` */
@@ -43,6 +72,31 @@ export class FrontEndControllerService extends BaseService {
   getAree(params?: GetAree$Params, context?: HttpContext): Observable<Array<AreaFront>> {
     return this.getAree$Response(params, context).pipe(
       map((r: StrictHttpResponse<Array<AreaFront>>): Array<AreaFront> => r.body)
+    );
+  }
+
+  /** Path part for operation `checkIfOwner()` */
+  static readonly CheckIfOwnerPath = '/frontEnd/checkIfCurator';
+
+  /**
+   * This method provides access to the full `HttpResponse`, allowing access to response headers.
+   * To access only the response body, use `checkIfOwner()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  checkIfOwner$Response(params?: CheckIfOwner$Params, context?: HttpContext): Observable<StrictHttpResponse<boolean>> {
+    return checkIfOwner(this.http, this.rootUrl, params, context);
+  }
+
+  /**
+   * This method provides access only to the response body.
+   * To access the full response (for headers, for example), `checkIfOwner$Response()` instead.
+   *
+   * This method doesn't expect any request body.
+   */
+  checkIfOwner(params?: CheckIfOwner$Params, context?: HttpContext): Observable<boolean> {
+    return this.checkIfOwner$Response(params, context).pipe(
+      map((r: StrictHttpResponse<boolean>): boolean => r.body)
     );
   }
 

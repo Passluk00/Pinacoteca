@@ -6,6 +6,7 @@ import {AuthenticationService} from "../../services/services/authentication.serv
 import {FaIconComponent} from "@fortawesome/angular-fontawesome";
 import {Router, RouterLink} from "@angular/router";
 import {faArrowRightFromBracket, faShop, faTriangleExclamation, faUser} from "@fortawesome/free-solid-svg-icons";
+import {FrontEndControllerService} from "../../services/services/front-end-controller.service";
 
 @Component({
   selector: 'app-navbar',
@@ -24,6 +25,7 @@ export class NavbarComponent implements OnInit{
     private router:Router,
     private userService: CuratorControllerService,
     private authService: AuthenticationService,
+    private frontEndService :FrontEndControllerService,
     private cdr: ChangeDetectorRef,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
@@ -33,27 +35,40 @@ export class NavbarComponent implements OnInit{
   isLogged: boolean = false
   isDropdownOpen: boolean = false
   isAdmin: boolean = true
+  isCurator: boolean = false
 
 
   ngOnInit() {
     this.checkLoginStatus()
-    this.showData()
     this.cdr.detectChanges()
   }
 
-  showData(){
+  controllo(){
+    this.frontEndService.isAdmin().subscribe({
+      next:(res) => {
+        this.isAdmin = res
+      },
+      error:() => {
+        console.error("fallito")
+      }
+    })
+  }
 
-    if(this.userData != undefined){
-
-      console.error("nome: "+ this.userData?.nome)
-
-    }
-
+  checkCurator(){
+    this.frontEndService.checkIfOwner().subscribe({
+      next:(res) => {
+        this. isCurator= res
+      },
+      error:() => {
+        console.error("fallito")
+      }
+    })
   }
 
 
-  getUserData(){
 
+
+  getUserData(){
     this.userService.getCuratorData().subscribe({
       next: (res) => {
         this.userData = res
@@ -90,6 +105,8 @@ export class NavbarComponent implements OnInit{
           next: (res) => {
             this.isLogged = res;
             this.getUserData()
+            this.controllo()
+            this.checkCurator()
             this.cdr.detectChanges();
 
           },

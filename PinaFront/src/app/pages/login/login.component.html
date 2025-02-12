@@ -13,14 +13,14 @@
 
     <div class="input-box">
       <input  [(ngModel)]="authRequest.email"  type="email" placeholder="Email">
-      <fa-icon  class="fa-solid fa-user icone"></fa-icon>
+      <fa-icon [icon]="faUser" class="icone"></fa-icon>
       <!-- Cambare icone  -->
     </div>
 
 
     <div class="input-box">
       <input [(ngModel)]="authRequest.password" type="password" placeholder="Password" (keydown.enter)="login()">
-      <fa-icon  class="fa-solid fa-key icone"></fa-icon>
+      <fa-icon [icon]="faKey" class="icone"></fa-icon>
     </div>
 
 

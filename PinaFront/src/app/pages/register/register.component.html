@@ -12,46 +12,46 @@
 
     <div class="input-box">
       <input  [(ngModel)]="authRequest.email"  type="email" placeholder="Email">
-      <fa-icon class=" fa-solid fa-envelope icone"></fa-icon>
+      <fa-icon  [icon]="faEnvelope" class="icone"></fa-icon>
       <!-- TODO Cambare icone  -->
     </div>
 
 
     <div class="input-box">
       <input [(ngModel)]="authRequest.password" type="password" placeholder="Password" (keydown.enter)="register()">
-      <fa-icon  class=" fa-solid fa-key icone"></fa-icon>
+      <fa-icon  [icon]="faKey" class="key icone"></fa-icon>
       <!-- TODO Cambare icone  -->
     </div>
 
 
     <div class="input-box">
       <input [(ngModel)]="authRequest.nome" type="text" placeholder="Nome">
-      <fa-icon class=" fa-solid fa-user icone"></fa-icon>
+      <fa-icon [icon]="faUser" class="user icone"></fa-icon>
       <!-- TODO Cambare icone  -->
     </div>
 
 
     <div class="input-box">
       <input [(ngModel)]="authRequest.cognome" type="text" placeholder="Congome">
-      <fa-icon class=" fa-solid fa-user icone"></fa-icon>
+      <fa-icon [icon]="faUser" class="user icone"></fa-icon>
       <!-- TODO Cambare icone  -->
     </div>
 
 
     <div class="input-box">
       <input [(ngModel)]="authRequest.codiceFiscale" type="text" placeholder="CodiceFiscale">
-      <fa-icon class=" fa-solid fa-user icone"></fa-icon>
+      <fa-icon [icon]="faAddressCard" class=" icone"></fa-icon>
       <!-- TODO Cambare icone  -->
     </div>
 
     <div class="input-box">
       <input [(ngModel)]="authRequest.dataNascita" type="date" placeholder="Data di nascita">
-      <fa-icon class=" fa-solid fa-user icone"></fa-icon>
+      <fa-icon [icon]="faCakeCandles" class="user icone"></fa-icon>
     </div>
 
     <div class="input-box">
       <input [(ngModel)]="authRequest.luogoDiNascita" type="text" placeholder="Luogo di Nascita">
-      <fa-icon class=" fa-solid fa-user icone"></fa-icon>
+      <fa-icon [icon]="faHospital" class=" icone"></fa-icon>
     </div>
 
 

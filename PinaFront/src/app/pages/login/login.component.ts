@@ -7,6 +7,7 @@ import {AuthenticationRequest} from "../../services/models/authentication-reques
 import {HttpClientModule} from "@angular/common/http";
 import {FaIconComponent} from "@fortawesome/angular-fontawesome";
 import {Router, RouterLink} from "@angular/router";
+import {faKey, faUser} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-login',
@@ -79,7 +80,6 @@ export class LoginComponent {
   }
 
 
-
-
-
+  protected readonly faUser = faUser;
+  protected readonly faKey = faKey;
 }

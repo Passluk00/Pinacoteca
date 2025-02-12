@@ -502,6 +502,26 @@
         }
       }
     },
+    "/frontEnd/isAdmin": {
+      "get": {
+        "tags": [
+          "front-end-controller"
+        ],
+        "operationId": "isAdmin",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/frontEnd/getAree": {
       "get": {
         "tags": [
@@ -518,6 +538,26 @@
                   "items": {
                     "$ref": "#/components/schemas/AreaFront"
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/frontEnd/checkIfCurator": {
+      "get": {
+        "tags": [
+          "front-end-controller"
+        ],
+        "operationId": "checkIfOwner",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
                 }
               }
             }

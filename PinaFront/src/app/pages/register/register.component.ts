@@ -5,6 +5,8 @@ import {FormsModule} from "@angular/forms";
 import {RegistrationRequest} from "../../services/models/registration-request";
 import {Router} from "@angular/router";
 import {AuthenticationService} from "../../services/services/authentication.service";
+import {faAddressCard, faCakeCandles, faHospital, faKey, faUser} from "@fortawesome/free-solid-svg-icons";
+import {faEnvelope} from "@fortawesome/free-solid-svg-icons/faEnvelope";
 
 @Component({
   selector: 'app-register',
@@ -59,4 +61,10 @@ export class RegisterComponent {
   }
 
 
+    protected readonly faUser = faUser;
+  protected readonly faEnvelope = faEnvelope;
+  protected readonly faKey = faKey;
+  protected readonly faAddressCard = faAddressCard;
+  protected readonly faCakeCandles = faCakeCandles;
+  protected readonly faHospital = faHospital;
 }
